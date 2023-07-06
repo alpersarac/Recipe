@@ -9,5 +9,6 @@
 
   </div>
 </div>
-<app-recipe-item *ngFor="let recipeEl of recipes"
-[recipe]="recipeEl"></app-recipe-item>
+<app-recipe-item *ngFor="let recipeEl of recipes let i= index"
+[recipe]="recipeEl"
+[index]="i"></app-recipe-item>
