@@ -22,6 +22,9 @@ ngOnInit(){
       this.ingredients=ingredients;
     });
 }
+onEditItem(index: number){
+  this.shoppingListService.startedEditting.next(index);
+}
 ngOnDestroy(): void {
  this.igChanged.unsubscribe();
 }
