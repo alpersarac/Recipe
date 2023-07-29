@@ -28,5 +28,7 @@ onEditItem(index: number){
 ngOnDestroy(): void {
  this.igChanged.unsubscribe();
 }
-
+onAddItem(index: number){
+  this.shoppingListService.startedEditting.next(index);
+}
 }
