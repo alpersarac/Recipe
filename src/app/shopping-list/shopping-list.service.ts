@@ -16,11 +16,19 @@ export class ShoppingListService{
     this.ingredients.push(ingredient);
     this.ingredientChanged.next(this.ingredients.slice());
   }
+  addIngredient(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
+    this.ingredientChanged.next(this.ingredients.slice());
+  }
   addIngredients(ingredient:Ingredient[]){
     this.ingredients.push(...ingredient);
     this.ingredientChanged.next(this.ingredients.slice());
   }
   getIngredients(index:number){
     return this.ingredients[index];
+  }
+  updateIngredient(index:number, newIngredient: Ingredient){
+    this.ingredients[index] = newIngredient;
+    this.ingredientChanged.next(this.ingredients.slice());
   }
 }
