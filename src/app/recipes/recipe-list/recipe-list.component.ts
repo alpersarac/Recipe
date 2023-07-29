@@ -16,6 +16,12 @@ export class RecipeListComponent {
               private route:ActivatedRoute) { }
 
   ngOnInit(){
+    this.recipeService.recipesChanged
+    .subscribe(
+      (recipes: Recipe[])=>{
+        this.recipes=recipes;
+      }
+    );
     this.recipes=this.recipeService.getRecipes();
   }
   onNewRecipe(){
