@@ -32,6 +32,7 @@ export class RecipeEditComponent implements OnInit {
         'amount': new FormControl(null,[
           Validators.required,
           Validators.pattern(/^[1-9]+[0-9]*$/)
+          //first commit
         ])
       })
     )
