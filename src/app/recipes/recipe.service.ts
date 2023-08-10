@@ -11,7 +11,7 @@ export class RecipeService{
   constructor(private shoppingListService:ShoppingListService) { }
 
 
-  private recipes:Recipe[] = [
+/*   private recipes:Recipe[] = [
     new Recipe('Lahmacun',
     'kıyma, domates',
     'https://cdn.yemek.com/uploads/2020/06/tembel-lahamacunu-yemekcom.jpg',
@@ -27,7 +27,8 @@ export class RecipeService{
       new Ingredient("elma",1),
       new Ingredient("şeker",1)
     ])
-  ];
+  ]; */
+  private recipes: Recipe[] = [];
 
   setRecipes(recipes : Recipe[]){
     this.recipes = recipes;
