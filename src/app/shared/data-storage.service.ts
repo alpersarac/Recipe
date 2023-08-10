@@ -16,8 +16,10 @@ import { Recipe } from "../recipes/recipe.model";
 
   }
   fetchRecipes(){
-    this.http.get<Recipe[]>('https://recipe-8950d-default-rtdb.firebaseio.com/recipes.json').subscribe(response => {
-      this.recipeService.setRecipes(response)
+    this.http.get<Recipe[]>('https://recipe-8950d-default-rtdb.firebaseio.com/recipes.json')
+    .subscribe(recipes => {
+      console.log(recipes);
+      this.recipeService.setRecipes(recipes)
     })
   }
  }
