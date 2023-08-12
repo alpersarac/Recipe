@@ -13,9 +13,10 @@ interface AuthResponseData{
 export class AuthService{
   constructor(private http: HttpClient){}
   signup(email : string, password : string){
-
-    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=AIzaSyAwfSrijOn7e_kO71yJzWjQtjsM9ryOc0U ',
+    console.log(email+"---"+password);
+    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAwfSrijOn7e_kO71yJzWjQtjsM9ryOc0U ',
     {
+
       email: email,
       password: password,
       returnSecureToken:true
