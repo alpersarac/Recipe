@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3" >
-    <form #authFrom (ngSubmit)="onSubmit(authFrom)">
+    <form #authFrom="ngForm" (ngSubmit)="onSubmit(authFrom)">
       <div class="form-group">
         <label for="email">Email</label>
         <input
@@ -27,7 +27,7 @@
       </div>
       <div>
         <button type="submit" class="btn btn-primary"
-        [disabled]="!authFrom.isvalid">
+        [disabled]="!authFrom.valid">
           {{ isLoginMode ? 'Login':'Sign Up'}}
         </button> |
         <button type="button" class="btn btn-primary" (click)="onSwitchMode()">
